@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Crew</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            text-align: center;
+        }
+        .orbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(0%, 0%);
+            animation: orbit 4s ease infinite;
+        }
+        .orbit img {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s ease infinite;
+        }
+        .orbit img:nth-child(1) { top: 0; left: 50%; transform: translate(-50%, -50%); }
+        .orbit img:nth-child(2) { top: 50%; left: 100%; transform: translate(-50%, -50%); }
+        .orbit img:nth-child(3) { top: 100%; left: 50%; transform: translate(-50%, -50%); }
+        .orbit img:nth-child(4) { top: 50%; left: 0; transform: translate(-50%, -50%); }
+        .orbit img:nth-child(5) { top: 0; left: 0; transform: translate(-50%, -50%); }
+
+        .orbit2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(0%, 0%);
+            animation: orbit2 4s linear infinite;
+        }
+        .orbit2 img {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s ease infinite;
+        }
+        .orbit2 img:nth-child(1) { top: 0; left: 50%; transform: translate(-50%, -50%); }
+        .orbit2 img:nth-child(2) { top: 50%; left: 100%; transform: translate(-50%, -50%); }
+        .orbit2 img:nth-child(3) { top: 100%; left: 50%; transform: translate(-50%, -50%); }
+        .orbit2 img:nth-child(4) { top: 50%; left: 0; transform: translate(-50%, -50%); }
+        .orbit2 img:nth-child(5) { top: 0; left: 0; transform: translate(-50%, -50%); }
+
+        @keyframes orbit2 {
+            from { transform: rotate(360deg) translateX(-50%) translateY(-50%); }
+            to { transform: rotate(0deg) translateX(-50%) translateY(-50%); }
+        }
+        @keyframes orbit {
+            from { transform: rotate(0deg) translateX(-50%) translateY(-50%); }
+            to { transform: rotate(360deg) translateX(-50%) translateY(-50%); }
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="orbit">
+            <img src="logo.png" alt="logo">
+            <img src="logo.png" alt="logo">
+            <img src="logo.png" alt="logo">
+            <img src="logo.png" alt="logo">
+            <img src="logo.png" alt="logo">
+        </div>
+        <h1 style="color: white;">Tech Crew</h1>
+        <div class="orbit2">
+            <img src="logo.png" alt="logo">
+            <img src="logo.png" alt="logo">
+            <img src="logo.png" alt="logo">
+            <img src="logo.png" alt="logo">
+            <img src="logo.png" alt="logo">
+        </div>
+    </div>
+</body>
+</html>
