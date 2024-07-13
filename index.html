@@ -95,6 +95,9 @@
                 background-position: 100% 50%;
             }
         }
+        .speed-up {
+            animation-duration: 0.6s !important; /* Adjust the animation duration as needed */
+        }
     </style>
 </head>
 <body>
@@ -121,6 +124,8 @@
     <script>
         function toggleRainbow() {
             document.body.classList.toggle('rainbow-background');
+            document.querySelector('.orbit').classList.toggle('speed-up');
+            document.querySelector('.orbit2').classList.toggle('speed-up');
         }
     </script>
 </body>
